@@ -128,3 +128,24 @@ struct Endpoint
 //        }
 //    }
 //}
+
+/*
+let groupedEvents: [[Event]] = events.reduce(into: [[Event]]()) { result, event in
+    // Check if we already have a sub-array for this date
+    if let lastGroup = result.last, lastGroup.first?.date.toDateString() == event.date.toDateString() {
+        // Add the event to the last sub-array
+        result[result.count - 1].append(event)
+    } else {
+        // Otherwise, start a new sub-array for this date
+        result.append([event])
+    }
+}
+
+// Print the result
+for subArray in groupedEvents {
+    print("Sub-array for date \(subArray.first!.date.toDateString()):")
+    for event in subArray {
+        print("  \(event.name)")
+    }
+}
+/*
